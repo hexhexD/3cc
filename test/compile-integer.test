@@ -1,0 +1,7 @@
+// RUN: %3cc 456 > %t 
+// RUN: FileCheck --input-file %t %s
+// RUN: fasm %t
+// CHECK: format MS64 COFF
+// CHECK-NEXT: section '.text' code readable executable
+// CHECK-NEXT: start:
+// CHECK-NEXT: mov rax, 456
