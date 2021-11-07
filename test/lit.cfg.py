@@ -5,7 +5,7 @@ config.name = "mycc"
 # So lit doesn't look for bash.exe on my machine
 config.test_format = lit.formats.ShTest(False)
 
-config.suffixes = ['.c', '.txt']
+config.suffixes = ['.c', '.test']
 config.excludes = ['CMakeLists.txt']
 
 config.test_source_root = os.path.dirname(__file__)

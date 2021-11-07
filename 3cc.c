@@ -7,7 +7,7 @@ int main(int argc, char** argv) {
     return 1;
   }
 
-  printf("format MS64 COFF\n");
+  printf("format PE64\n");
   printf("section '.text' code readable executable\n");
   printf("start:\n");
   printf("\tmov rax, %d\n", atoi(argv[1]));
