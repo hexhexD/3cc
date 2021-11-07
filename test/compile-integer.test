@@ -3,5 +3,5 @@
 // RUN: fasm %t %t
 // CHECK: format PE64
 // CHECK-NEXT: section '.text' code readable executable
-// CHECK-NEXT: start:
+// CHECK-NEXT: main:
 // CHECK-NEXT: mov rax, 456

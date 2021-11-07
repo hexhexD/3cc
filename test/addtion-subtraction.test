@@ -1,0 +1,11 @@
+// RUN: %3cc "2+3-4+3" > %t 
+// RUN: FileCheck --input-file %t %s
+// RUN: fasm %t %t
+// CHECK: format PE64
+// CHECK-NEXT: section '.text' code readable executable
+// CHECK-NEXT: main:
+// CHECK-NEXT:  mov rax, 2
+// CHECK-NEXT:  add rax, 3
+// CHECK-NEXT:  sub rax, 4
+// CHECK-NEXT:  add rax, 3
+// CHECK-NEXT:  ret
